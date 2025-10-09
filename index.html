@@ -73,7 +73,9 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="underlight typing-text text-light"> Albin a Webdeveloper</span></h2>
+           <section class="hero">
+  <h1>I am Albin <hr> a <span class="typing-text"></span></h1>
+</section>
             <p class="text-light">
 Creating innovative web solutions with a focus on user experience and performance. Passionate about turning ideas into responsive, dynamic websites that drive results. Always exploring new technologies to stay ahead of the curve.</p>
             <!-- <a href="contact.html" class="btn-get-started">Available for Hire<br></a> -->
@@ -1023,6 +1025,41 @@ New to the field, passionate about building web solutions.
 
   <!-- Main JS File -->
   <script src="js/main.js"></script>
+<script>
+  const roles = [
+    "Web Designer",
+    "Web Developer",
+  
+  ];
+
+  const typingElement = document.querySelector(".typing-text");
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentRole = roles[roleIndex];
+    const visibleText = currentRole.substring(0, charIndex);
+
+    typingElement.textContent = visibleText;
+
+    if (!isDeleting && charIndex < currentRole.length) {
+      charIndex++;
+      setTimeout(type, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 50);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+      setTimeout(type, 2000);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", type);
+</script>
 
 </body>
 
