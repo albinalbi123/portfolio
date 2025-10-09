@@ -1549,3 +1549,24 @@ section,
 .main-icon{
   background-color: #f77f00;
 }
+
+.hero {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:transparent;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2.5rem;
+}
+
+.typing-text::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
