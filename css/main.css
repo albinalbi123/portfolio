@@ -1483,7 +1483,7 @@ section,
   width: 100%; /* Adjust based on text length */
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid black;
+  border-right: 2px solid rgb(255, 255, 255);
   font-family: monospace;
   animation: typing 3s steps(22), blink 0.6s step-end infinite alternate;
   text-align: center;
@@ -1561,7 +1561,7 @@ section,
 }
 
 .typing-text::after {
-  content: '|';
+  /* content: '|'; */
   animation: blink 0.7s infinite;
 }
 
