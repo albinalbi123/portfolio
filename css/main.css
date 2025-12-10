@@ -19,12 +19,14 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #080808; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #1d1c1c; /* Color for headings, subheadings and title throughout the website */
-  --accent-color:rgb(24, 24, 24); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: #000000; /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
+  --accent-color:rgb(215, 132, 9); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --nav-color:#ffffff;
+  --nav-back-color:#000000;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -143,16 +145,19 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--default-color);
+  color: var(--nav-color);
+  background-color: var(--nav-back-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-  border-bottom: 1px solid var(--background-color);
+  border-bottom: 1px solid var(--nav-color);
 }
 
 .header .logo {
   line-height: 1;
+}
+.header .logo i{
+color: rgb(150, 148, 148);
 }
 
 .header .logo img {
@@ -164,7 +169,7 @@ h6 {
   font-size: 32px;
   margin: 0;
   font-weight: 400;
-  color: var(--heading-color);
+  color: var(--nav-color);
 }
 
 .header .logo i {
@@ -177,7 +182,7 @@ h6 {
 }
 
 .header .header-social-links a {
-  color: color-mix(in srgb, var(--background-color), transparent 40%);
+  color: color-mix(in srgb, var(--nav-color), transparent 40%);
   padding-left: 6px;
   display: inline-block;
   transition: 0.3s;
@@ -1330,7 +1335,7 @@ section,
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 5px 0;
-  font-family: var(--default-font);
+  font-family: var(--default-color);
 }
 
 .contact .info-item p {
@@ -1342,6 +1347,9 @@ section,
 .contact .info-item:hover i {
   background: var(--accent-color);
   color: var(--contrast-color);
+}
+.connect h1,p{
+  color: var(--default-color);
 }
 
 @media (max-width: 575px) {
@@ -1358,7 +1366,7 @@ section,
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: var(--surface-color);
+  background-color: var(--background-color);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
@@ -1459,13 +1467,30 @@ section,
 }
 .nav-item a{
   background-color:var(--background-color);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .nav-tabs .nav-link.active {
   background-color:var(--accent-color); 
   color: #fff; 
 }
+@media(max-width:700px){
+  .nav .nav-item .nav-link{
+    font-size: small;
+  }
+}
+@media(max-width:600px){
+  .nav .nav-item .nav-link{
+    font-size: small;
+    padding: 10px;
 
+  }
+  .work h2{
+    font-size: 25px;
+  }
+  .work p{
+    font-size: 16px;
+  }
+}
 /* .nav-item:hover
 {
   background-color:var(--accent-color);
