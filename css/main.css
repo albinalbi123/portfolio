@@ -854,7 +854,6 @@ section,
   min-width: 100px;
   border: var(--accent-color) solid 3px;
 }
-
 @media (max-width: 762px) {
 .gallery .gallery-item {
   position: relative;
@@ -884,12 +883,30 @@ section,
   max-width: 200px;
   border: var(--accent-color) solid 3px;
 }
+@media (max-width: 440px) {
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 120px !important;
+  max-width: 180px;
+  border: var(--accent-color) solid 3px;
+}
+@media (max-width: 390px) {
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 120px !important;
+  max-width: 160px;
+  border: var(--accent-color) solid 3px;
+}
 }
 #home{
   margin: 0px;
   max-width: 100%;
+  padding: 0px;
 }
-
 .gallery .gallery-item img {
   transition: 0.3s;
   width: 100%;
