@@ -855,6 +855,41 @@ section,
   border: var(--accent-color) solid 3px;
 }
 
+@media (max-width: 762px) {
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 140px !important;
+  max-width: 300px;
+  border: var(--accent-color) solid 3px;
+}
+}
+@media (max-width: 662px) {
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 140px !important;
+  max-width: 200px;
+  border: var(--accent-color) solid 3px;
+}
+}
+@media (max-width: 532px) {
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 120px !important;
+  max-width: 150px;
+  border: var(--accent-color) solid 3px;
+}
+}
+#home{
+  margin: 0px;
+  max-width: 100%;
+}
+
 .gallery .gallery-item img {
   transition: 0.3s;
   width: 100%;
