@@ -854,6 +854,7 @@ section,
   min-width: 100px;
   border: var(--accent-color) solid 3px;
 }
+
 @media (max-width: 762px) {
 .gallery .gallery-item {
   position: relative;
