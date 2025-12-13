@@ -883,6 +883,7 @@ section,
   max-width: 200px;
   border: var(--accent-color) solid 3px;
 }
+}
 @media (max-width: 440px) {
 .gallery .gallery-item {
   position: relative;
@@ -891,6 +892,7 @@ section,
   height: 120px !important;
   max-width: 180px;
   border: var(--accent-color) solid 3px;
+}
 }
 @media (max-width: 390px) {
 .gallery .gallery-item {
